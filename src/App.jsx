@@ -547,7 +547,8 @@ const App = () => {
                     </div>
                     <div>
                       <p className="text-xs text-slate-400 uppercase font-bold tracking-wider mb-1">Call Us</p>
-                      <p className="font-semibold text-lg hover:text-amber-400 transition-colors cursor-pointer">+94 77 123 4567</p>
+                      <p className="font-semibold text-lg hover:text-amber-400 transition-colors cursor-pointer">+94 77 706 0577</p>
+                      <p className="font-semibold text-lg hover:text-amber-400 transition-colors cursor-pointer">+94 71 1303123</p>
                     </div>
                   </div>
                   
@@ -557,7 +558,7 @@ const App = () => {
                     </div>
                     <div>
                       <p className="text-xs text-slate-400 uppercase font-bold tracking-wider mb-1">Email Us</p>
-                      <p className="font-semibold text-lg hover:text-amber-400 transition-colors cursor-pointer">hello@rstravels.lk</p>
+                      <p className="font-semibold text-lg hover:text-amber-400 transition-colors cursor-pointer">rangajeewandw@gmail.com</p>
                     </div>
                   </div>
 
@@ -567,7 +568,7 @@ const App = () => {
                     </div>
                     <div>
                       <p className="text-xs text-slate-400 uppercase font-bold tracking-wider mb-1">Visit Us</p>
-                      <p className="font-semibold text-lg">No. 45, Lotus Road, Colombo 01</p>
+                      <p className="font-semibold text-lg">B 2/2/1,Chitra Lane Flat, Narahenpita, Colombo 05.</p>
                     </div>
                   </div>
                 </div>
