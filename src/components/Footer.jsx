@@ -45,7 +45,29 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm">&copy; {new Date().getFullYear()} R&S Travels. All rights reserved.</p>
+          <div className="text-center md:text-left">
+            <p className="text-sm">&copy; {new Date().getFullYear()} R&S Travels. All rights reserved.</p>
+            <p className="text-sm mt-2">
+              <a 
+                href="https://pavithrawijesooriya.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
+                <span className="text-slate-400 font-normal group-hover:text-white transition-colors">Made by </span>
+                {'Pavithra Wijesooriya'.split('').map((char, index) => (
+                  <span 
+                    key={index} 
+                    className="font-bold animate-letterGlow"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    {char === ' ' ? '\u00A0' : char}
+                  </span>
+                ))}
+              </a>
+            </p>
+          </div>
+          
           <div className="flex items-center gap-2 mt-4 md:mt-0">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             <span className="text-xs font-semibold text-emerald-500 uppercase tracking-widest">System Operational</span>

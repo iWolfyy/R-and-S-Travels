@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
-import { MapPin, Star, ArrowRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { MapPin, Star, ArrowRight, ChevronUp, ChevronDown } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 const Destinations = ({ destinations }) => {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [isExpanded, setIsExpanded] = useState(false);
+  const isMobile = useMediaQuery('(max-width: 767px)');
+
   const categories = ['All', ...new Set(destinations.map(d => d.category))];
 
   const filteredDestinations = activeCategory === 'All' 
     ? destinations 
     : destinations.filter(d => d.category === activeCategory);
+
+  useEffect(() => {
+    setIsExpanded(false);
+  }, [activeCategory]);
+
+  const destinationsToShow = isMobile && !isExpanded 
+    ? filteredDestinations.slice(0, 3) 
+    : filteredDestinations;
 
   return (
     <AnimatedSection>
@@ -22,7 +34,6 @@ const Destinations = ({ destinations }) => {
               </p>
             </div>
             
-            {/* Filter Tabs */}
             <div className="flex flex-wrap gap-2">
               {categories.map((cat) => (
                 <button 
@@ -41,7 +52,7 @@ const Destinations = ({ destinations }) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredDestinations.map((dest) => (
+            {destinationsToShow.map((dest) => (
               <div key={dest.id} className="group relative bg-white rounded-3xl shadow-lg overflow-hidden border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                 <div className="relative h-72 overflow-hidden">
                   <img 
@@ -75,6 +86,19 @@ const Destinations = ({ destinations }) => {
               </div>
             ))}
           </div>
+
+          {isMobile && filteredDestinations.length > 3 && (
+            <div className="mt-12 text-center">
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="bg-slate-100 text-slate-700 px-8 py-3 rounded-full font-bold hover:bg-slate-200 transition-colors flex items-center gap-2 mx-auto"
+              >
+                <span>{isExpanded ? 'Show Less' : 'Show More'}</span>
+                {isExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+              </button>
+            </div>
+          )}
+
         </div>
       </section>
     </AnimatedSection>
