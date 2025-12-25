@@ -10,7 +10,8 @@ const Navbar = ({ isScrolled, scrollToSection, isMobileMenuOpen, setIsMobileMenu
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-2 group cursor-pointer" onClick={() => scrollToSection('home')}>
-          <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center text-white shadow-lg transform group-hover:rotate-12 transition-transform">
+          <div className="w-10 h-10 bg-gradient-to-br from-white-500 to-teal-600 rounded-lg flex items-center justify-center text-white shadow-lg transform group-hover:rotate-12 transition-transform">
+            <img src="/logo.jpg" alt="Company Logo" className="rounded-lg object-cover w-full h-full" />
             <MapPin className="w-6 h-6" />
           </div>
           <span className={`text-2xl font-extrabold tracking-tight ${isScrolled ? 'text-slate-900' : 'text-white'}`}>
