@@ -17,7 +17,7 @@ R & S Travels is a modern and visually appealing landing page for a travel agenc
 
 <br />
 
-[**Live Demo »**](https://rstravels.example.com)
+[**Live Demo »**](https://randstravels.netlify.app/)
 
 <br />
 
