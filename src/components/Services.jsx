@@ -17,7 +17,7 @@ const Services = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
-              <span className="text-emerald-300 font-bold tracking-widest uppercase">Why Choose R&S Travels</span>
+              <span className="text-emerald-300 font-bold tracking-widest uppercase">Why Choose Beyond The Journey Travels</span>
               <h2 className="text-4xl md:text-6xl font-black mt-4 mb-6 leading-tight">
                 Travel with <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">Confidence</span>
               </h2>

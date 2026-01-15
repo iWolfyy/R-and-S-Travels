@@ -18,18 +18,11 @@ const Navbar = ({ isScrolled, scrollToSection, isMobileMenuOpen, setIsMobileMenu
           onClick={() => scrollToSection('home')}
           className="flex items-center gap-3 cursor-pointer group select-none"
         >
-          <div className="relative w-10 h-10 rounded-xl overflow-hidden shadow-lg transition-transform duration-500 group-hover:rotate-3 group-hover:scale-105">
-            <img 
-              src="/logo.jpg" 
-              alt="R&S Logo" 
-              className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent pointer-events-none"></div>
-          </div>
+
           <span className={`text-2xl font-extrabold tracking-tight transition-colors duration-300 ${
             isScrolled ? 'text-slate-800' : 'text-white drop-shadow-md'
           }`}>
-            R<span className="text-amber-500">&</span>S <span className="font-light opacity-90 text-lg">Travels</span>
+            Beyond<span className="text-amber-500"> The</span> Journey<span className="font-light opacity-90 text-lg"> Travels</span>
           </span>
         </div>
 

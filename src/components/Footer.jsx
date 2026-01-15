@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
             <span className="text-3xl font-extrabold text-white tracking-tight">
-              R<span className="text-amber-500">&</span>S
+              Beyond <span className="text-amber-500"> The</span> Journey<span className="font-light opacity-90 text-lg">  Travels</span>
             </span>
             <p className="mt-4 text-sm leading-relaxed">
               Crafting unforgettable journeys across the Pearl of the Indian Ocean. Licensed, trusted, and passionate about Sri Lanka.
@@ -46,7 +46,7 @@ const Footer = () => {
         
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left">
-            <p className="text-sm">&copy; {new Date().getFullYear()} R&S Travels. All rights reserved.</p>
+            <p className="text-sm">&copy; {new Date().getFullYear()} Beyond The Journey Travels. All rights reserved.</p>
             <p className="text-sm mt-2">
               <a 
                 href="https://pavithrawijesooriya.netlify.app/"

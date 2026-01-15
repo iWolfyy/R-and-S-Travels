@@ -89,7 +89,7 @@ export const destinations = [
     {
       name: "Sarah Jenkins",
       country: "UK",
-      text: "The best holiday of my life! R&S Travels handled everything perfectly. The driver was so knowledgeable.",
+      text: "The best holiday of my life! Beyond The Journey Travels handled everything perfectly. The driver was so knowledgeable.",
       rating: 5
     },
     {
