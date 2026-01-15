@@ -25,7 +25,7 @@ const Preloader = ({ onComplete }) => {
       </div>
 
       <h1 className="text-4xl font-black text-white tracking-widest font-serif mb-4 animate-[fadeInUp_1s_ease-out]">
-        R<span className="text-amber-500">&</span>S
+        Beyond<span className="text-amber-500"> The</span> Journey
       </h1>
 
       {/* Loading Bar */}

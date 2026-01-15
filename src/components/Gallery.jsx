@@ -59,38 +59,40 @@ const Gallery = ({ galleryImages }) => {
         {/* Lightbox Modal */}
         {selectedImg && (
           <div 
-            className="fixed inset-0 z-[60] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 animate-fadeIn"
+            className="fixed inset-0 z-[60] bg-black/95 backdrop-blur-xl animate-fadeIn"
             onClick={closeLightbox}
           >
             <button 
-              className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors"
+              className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors z-10"
               onClick={closeLightbox}
             >
               <X className="w-8 h-8" />
             </button>
 
             <button 
-              className="absolute left-4 md:left-8 text-white/50 hover:text-white p-2 rounded-full hover:bg-white/10 transition-all hidden md:block"
+              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white/50 hover:text-white p-2 rounded-full hover:bg-white/10 transition-all hidden md:block z-10"
               onClick={(e) => navigate(-1, e)}
             >
               <ChevronLeft className="w-8 h-8" />
             </button>
 
-            <img 
-              src={selectedImg} 
-              alt="Fullscreen view" 
-              className="max-w-full max-h-[90vh] rounded-lg shadow-2xl object-contain animate-[fadeInUp_0.5s_ease-out]"
-              onClick={(e) => e.stopPropagation()}
-            />
+            <div className="absolute inset-0 flex items-center justify-center p-4 md:p-8">
+              <img 
+                src={selectedImg} 
+                alt="Fullscreen view" 
+                className="max-w-full max-h-full w-auto h-auto rounded-lg shadow-2xl object-contain animate-[fadeInUp_0.5s_ease-out]"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
 
             <button 
-              className="absolute right-4 md:right-8 text-white/50 hover:text-white p-2 rounded-full hover:bg-white/10 transition-all hidden md:block"
+              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white/50 hover:text-white p-2 rounded-full hover:bg-white/10 transition-all hidden md:block z-10"
               onClick={(e) => navigate(1, e)}
             >
               <ChevronRight className="w-8 h-8" />
             </button>
             
-            <div className="absolute bottom-6 left-0 w-full text-center text-white/60 text-sm font-light tracking-widest">
+            <div className="absolute bottom-6 left-0 w-full text-center text-white/60 text-sm font-light tracking-widest z-10">
               {currentIndex + 1} / {galleryImages.length}
             </div>
           </div>

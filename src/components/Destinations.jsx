@@ -7,7 +7,7 @@ const Destinations = ({ destinations }) => {
   const [activeCategory, setActiveCategory] = useState('All');
 
   const categories = ['All', ...new Set(destinations.map(d => d.category))];
-
+  
   const filteredDestinations = activeCategory === 'All' 
     ? destinations 
     : destinations.filter(d => d.category === activeCategory);
@@ -44,6 +44,7 @@ const Destinations = ({ destinations }) => {
 
           {/* Destination Cards - Grid on Desktop, Scroll Carousel on Mobile */}
           <motion.div 
+            key={activeCategory}
             className="flex overflow-x-auto snap-x snap-mandatory pb-12 gap-6 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:overflow-visible -mx-6 px-6 md:mx-0 md:px-0"
             variants={{
               hidden: { opacity: 0 },
@@ -53,13 +54,11 @@ const Destinations = ({ destinations }) => {
               }
             }}
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
+            animate="visible"
           >
             {filteredDestinations.map((dest) => (
               <motion.div 
                 key={dest.id} 
-                layout
                 variants={{
                   hidden: { opacity: 0, y: 50 },
                   visible: { 
